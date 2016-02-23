@@ -1,0 +1,6 @@
+rank:0 time for read data 16989
+rank:0 time for process data 862345
+rank:0 time for write data 251232
+rank:1 time for read data 16925
+rank:1 time for process data 863056
+rank:1 time for write data 250070

@@ -1,0 +1,14 @@
+[ 50%] Linking CXX executable mpitest
+clang: warning: argument unused during compilation: '-pthread'
+Undefined symbols for architecture x86_64:
+  "boost::gregorian::greg_month::get_month_map_ptr()", referenced from:
+      unsigned short boost::date_time::month_str_to_ushort<boost::gregorian::greg_month>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in main.cpp.o
+  "boost::gregorian::greg_month::as_long_string() const", referenced from:
+      boost::date_time::month_formatter<boost::gregorian::greg_month, boost::date_time::simple_format<char>, char>::format_month(boost::gregorian::greg_month const&, std::__1::basic_ostream<char, std::__1::char_traits<char> >&) in main.cpp.o
+  "boost::gregorian::greg_month::as_short_string() const", referenced from:
+      boost::date_time::month_formatter<boost::gregorian::greg_month, boost::date_time::simple_format<char>, char>::format_month(boost::gregorian::greg_month const&, std::__1::basic_ostream<char, std::__1::char_traits<char> >&) in main.cpp.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[2]: *** [mpitest] Error 1
+make[1]: *** [CMakeFiles/mpitest.dir/all] Error 2
+make: *** [all] Error 2
