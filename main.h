@@ -25,7 +25,6 @@ public:
     float get_mean();
     void update(vector<float>& return_v);
     float get_JB_factor();
-
     // constructors
     Normality();
     Normality(vector<float>& return_v);
@@ -38,13 +37,11 @@ float Normality::get_sum(vector<float>& vec) {
     }
     return sum;
 }
-
 float Normality::get_mean() {
     /* derive the mean from sum */
     mean = sum / (float)count;
     return mean;
 }
-
 void Normality::update(vector<float>& vec)
 {
     /* update stats info inside the class */
@@ -60,7 +57,6 @@ void Normality::update(vector<float>& vec)
     skew = skew/ (pow (var, 1.5));
     kurt = kurt/ (pow (var, 2.0));
 }
-
 float Normality::get_JB_factor() {
     /* calculate JB factor */
     JB_factor = kurt - 3.0;
@@ -71,16 +67,15 @@ float Normality::get_JB_factor() {
     JB_factor = JB_factor / 6.0;
     return JB_factor;
 }
-
 Normality::Normality(){
     /* initialization constructor */
-    mean = 0;
-    sum = 0;
-    count = 0;
-    var = 0;
-    skew = 0;
-    kurt = 0;
-    JB_factor = 0;
+    mean = 0.0;
+    sum = 0.0;
+    count = 0.0;
+    var = 0.0;
+    skew = 0.0;
+    kurt = 0.0;
+    JB_factor = 0.0;
 }
 Normality::Normality(vector<float>& vec){
     /* complicated constructor */
